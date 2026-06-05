@@ -1,0 +1,38 @@
+﻿@model List<CriminalManagementSystem.Models.Criminal>
+
+<h2>Criminal Records</h2>
+
+<a asp-action="Create"
+   class="btn btn-success">
+    Add Criminal
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>CNIC</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.CNIC</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
