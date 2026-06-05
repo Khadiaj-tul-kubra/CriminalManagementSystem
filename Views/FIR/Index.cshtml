@@ -1,0 +1,38 @@
+﻿@model List<CriminalManagementSystem.Models.FIR>
+
+<h2>FIR Records</h2>
+
+<a asp-action="Create"
+   class="btn btn-success">
+    Add New FIR
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>FIR Number</th>
+            <th>Complainant</th>
+            <th>Crime Type</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FIRNumber</td>
+                <td>@item.ComplainantName</td>
+                <td>@item.CrimeType</td>
+                <td>@item.DateFiled</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

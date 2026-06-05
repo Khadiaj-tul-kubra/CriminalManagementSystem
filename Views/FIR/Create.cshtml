@@ -1,0 +1,42 @@
+﻿@model CriminalManagementSystem.Models.FIR
+
+<h2>Create FIR</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>FIR Number</label>
+        <input asp-for="FIRNumber" class="form-control" />
+    </div>
+
+    <div>
+        <label>Complainant Name</label>
+        <input asp-for="ComplainantName" class="form-control" />
+    </div>
+
+    <div>
+        <label>Crime Type</label>
+        <input asp-for="CrimeType" class="form-control" />
+    </div>
+
+    <div>
+        <label>Description</label>
+        <textarea asp-for="Description"
+                  class="form-control"></textarea>
+    </div>
+
+    <div>
+        <label>Date Filed</label>
+        <input asp-for="DateFiled"
+               type="date"
+               class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit"
+            class="btn btn-primary">
+        Save FIR
+    </button>
+
+</form>
